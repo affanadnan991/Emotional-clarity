@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #080b14;
+    color: #c9cdd8;
+    font-family: var(--font-sans), sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display), serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Animations */
+@keyframes drift {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(30px, -30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Orb glow backgrounds */
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+/* Scroll-triggered fade */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Beautiful transitions */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.transition-smooth-slow {
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Glass morphism */
+.glass {
+  background: rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(160, 170, 210, 0.1);
+}
+
+.glass-hover {
+  @apply glass transition-all duration-300 hover:bg-[rgba(255,255,255,0.035)] hover:border-[rgba(160,170,210,0.2)];
+}
+
+/* Gradients */
+.gradient-text {
+  background: linear-gradient(135deg, #e8eaf0 0%, #a8b4d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 14, 27, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(160, 170, 210, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(160, 170, 210, 0.4);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Optimized animations for mobile */
+  @keyframes drift {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(15px, -15px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  /* Reduce orb opacity on mobile for better performance */
+  .orb {
+    opacity: 0.12;
+  }
+
+  /* Slower drift animation on mobile for smoother effect */
+  .orb-1 {
+    animation: drift 20s ease-in-out infinite alternate !important;
+  }
+
+  .orb-2 {
+    animation: drift 20s ease-in-out infinite alternate !important;
+    animation-delay: -8s !important;
+  }
+
+  .orb-3 {
+    animation: drift 20s ease-in-out infinite alternate !important;
+    animation-delay: -14s !important;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Extra small screens */
+  .orb {
+    opacity: 0.1;
+    filter: blur(60px);
+  }
+
+  @keyframes drift {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(10px, -10px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  .orb-1 {
+    animation: drift 22s ease-in-out infinite alternate !important;
+  }
+
+  .orb-2 {
+    animation: drift 22s ease-in-out infinite alternate !important;
+    animation-delay: -10s !important;
+  }
+
+  .orb-3 {
+    animation: drift 22s ease-in-out infinite alternate !important;
+    animation-delay: -16s !important;
+  }
+}
+
+/* Respect prefers-reduced-motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .orb {
+    animation: none !important;
+    opacity: 0.08;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

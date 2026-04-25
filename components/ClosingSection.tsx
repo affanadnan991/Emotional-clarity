@@ -97,7 +97,7 @@ export default function ClosingSection() {
             Agar tum yahan tak pohanche ho… to bas itna kehna tha ke main serious hoon. 
             <br />
             <span className="block mt-3 text-[#5a6278] italic">
-              Lekin tumhari khushi aur khud par trust — wo sab se zyada important hai.
+              Lekin tumhari khushi aur mujh par trust — wo sab se zyada important hai.
             </span>
           </p>
         </motion.div>
@@ -140,3 +140,4 @@ export default function ClosingSection() {
     </section>
   )
 }
+// hello wolrd

@@ -2,7 +2,11 @@ import type { Metadata } from 'next'
 import { Cormorant_Garamond, DM_Sans } from 'next/font/google'
 import Toast from '@/components/Toast'
 import GradientBg from '@/components/GradientBg'
-import './globals.css'; 
+import ScrollProgress from '@/components/ScrollProgress'
+import EmotionalHeartbeat from '@/components/EmotionalHeartbeat'
+import { EmotionalSyncProvider } from '@/lib/EmotionalSyncContext'
+// @ts-ignore
+import './globals.css'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -36,9 +40,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
       <body className="bg-[#0a0e27] text-white overflow-x-hidden">
-        <GradientBg />
-        <Toast />
-        {children}
+        <EmotionalSyncProvider>
+          <GradientBg />
+          <Toast />
+          <ScrollProgress />
+          <EmotionalHeartbeat />
+          {children}
+        </EmotionalSyncProvider>
       </body>
     </html>
   )

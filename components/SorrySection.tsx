@@ -89,7 +89,7 @@ export default function SorrySection() {
       highlight: false,
     },
     {
-      text: 'Tera belief, tera innocence, tera way of loving — yeh sab bohot precious hai. Aur main usko safe rakhna chahta hoon. Truly.',
+      text: 'Aapka belief, aapka innocence, aapka way of loving — yeh sab bohot precious hai. Aur main usko safe rakhna chahta hoon. Truly.',
       delay: 16800,
       bigGap: true,
       highlight: false,

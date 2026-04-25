@@ -44,9 +44,11 @@ export default function MomentOfPause() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="font-display font-light text-[clamp(2rem,6vw,3.5rem)] leading-relaxed text-[#e8eaf0] mb-8"
+          className="font-display font-light text-[clamp(1.5rem,3vw,3rem)] leading-relaxed text-[#e8eaf0] mb-8"
         >
-          Main jaldbaazi me nahi hoon.
+          baat adhoori thi, is liye khamosh raha main,
+warna jo mehsoos karta hoon, wo lafzon se zyada hai.
+
         </motion.h2>
 
         {/* Breathing space */}

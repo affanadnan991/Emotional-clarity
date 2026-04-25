@@ -64,7 +64,7 @@ export default function MomentOfPause() {
           transition={{ duration: 0.8, delay: 2.4 }}
           className="font-display font-light text-[clamp(1.8rem,5vw,3rem)] italic text-[#a8b4d4]"
         >
-          Bas clear hona chahta hoon.
+          Bas thora develop hona chahta hoon.
         </motion.h3>
 
         {/* Subtext */}

@@ -12,6 +12,7 @@ import ChoiceSection from '@/components/ChoiceSection'
 import ClosingSection from '@/components/ClosingSection'
 import MusicToggle from '@/components/MusicToggle'
 import HiddenMessage from '@/components/HiddenMessage'
+import SorrySection from '@/components/SorrySection'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -37,6 +38,7 @@ export default function Home() {
         <IntentSection />
         <EffortReveal />
         <ChoiceSection />
+        <SorrySection />
         <ClosingSection />
 
         {/* Ambient music toggle */}

@@ -1,11 +1,13 @@
 import BackgroundEffects from '@/components/BackgroundEffects'
 import ParticleCanvas from '@/components/ParticleCanvas'
-import HeroSection from '@/components/HeroSection'
+import HeroSectionEnhanced from '@/components/HeroSectionEnhanced'
+import Timeline from '@/components/Timeline'
 import StorySection from '@/components/StorySection'
 import IntentSection from '@/components/IntentSection'
 import ChoiceSection from '@/components/ChoiceSection'
 import ClosingSection from '@/components/ClosingSection'
 import MusicToggle from '@/components/MusicToggle'
+import HiddenMessage from '@/components/HiddenMessage'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -18,8 +20,12 @@ export default function Home() {
         {/* Particle layer */}
         <ParticleCanvas />
 
+        {/* Hidden emotional message */}
+        <HiddenMessage />
+
         {/* Page sections */}
-        <HeroSection />
+        <HeroSectionEnhanced />
+        <Timeline />
         <StorySection />
         <IntentSection />
         <ChoiceSection />

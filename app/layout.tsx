@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Cormorant_Garamond, DM_Sans } from 'next/font/google'
 import Toast from '@/components/Toast'
 import GradientBg from '@/components/GradientBg'
-import './globals.css'
+import './globals.css'; 
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
